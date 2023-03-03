@@ -1,0 +1,12 @@
+predicates 
+red(symbol).
+nondeterm likes(symbol,symbol).
+CLAUSES
+red(rose).
+likes(bill,dogs).
+likes(bet,Something)if likes(bill,Something).
+likes(bet,Something)if red(Something).
+goal
+likes(bet,rose).
+%likes(bill,dogs).
+%likes(bill,what).
