@@ -1,0 +1,20 @@
+predicates 
+alina(symbol).
+nondeterm love(symbol,symbol).
+CLAUSES
+red(rose).
+love(bill,dogs).
+love(ali,halva).
+love(mother,father).
+love(ruSSlan,Asad).
+love(me,code).
+love(bekhan,gym).
+love(bek,live).
+love(han,power).
+love(girl,boy).
+love(bet,Something)if love(bill,Something).
+love(ali,Something)if alina(Something).
+goal
+love(bet,alina).
+%likes(ali,dogs).
+%likes(bek,what).
