@@ -1,0 +1,30 @@
+domains
+ivan,igor,elena,tatyana=symbol.
+ 
+predicates
+zachet(symbol).
+diskoteka(symbol).
+vremya(symbol).
+segodnya(symbol).
+ 
+nondeterm sdal(symbol,symbol).
+nondeterm poidet(symbol,symbol).
+nondeterm svoboden(symbol,symbol).
+ 
+CLAUSES
+zachet(lab).
+diskoteka(dance).
+vremya(time).
+segodnya(vecherom).
+ 
+sdal(igor,lab).
+sdal(ivan,lab)if sdal(igor,lab).
+sdal(elena,lab).
+sdal(tatyana,lab).
+svoboden(igor,vecherom).
+poidet(elena,dance)if sdal(elena,lab).
+poidet(tatyana,dance)if sdal(tatyana,lab).
+poidet(igor,dance)if svoboden(igor,vecherom).
+ 
+goal
+sdal(Who,lab).
