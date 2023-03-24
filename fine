@@ -1,0 +1,15 @@
+Domains
+name, salary, position, company = symbol.
+edu, exp = symbol.
+level, spec, gender = symbol.
+
+Predicates
+nondeterm job(position, salary, company, gender, level, edu).
+nondeterm is_equal(gender)
+nondeterm employ(name,positrion, company, edu).
+
+Clauses
+job(metalurg, 30000, bish, male, entry, bachalor).
+job(programmer, 60000, techKitchen, all, entry).
+
+employ(bekhan,
