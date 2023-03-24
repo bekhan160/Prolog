@@ -7,6 +7,7 @@ Predicates
 nondeterm man(name, age).
 nondeterm is_older(name, name).
 nondeterm is_younger(name, name).
+nondeterm is_interest(name, name).
 nondeterm is_peers(name, name).
 
 Clauses
@@ -14,6 +15,7 @@ man(bekhan, 18).
 man(asad, 19).
 man(ruslan, 17).
 man(ali, 18).
+man(batya, 30).
 
 is_older(Person1, Person2) if
 man(Person1, Age1) and
@@ -25,6 +27,11 @@ man(Person1, Age1) and
 man(Person2, Age2) and
 Age1 < Age2.
 
+is_interest(Person1, Person2) if
+man(Person1, Age1) and
+man(Person2, Age2) and
+Age1 - Age2 < 5.
+
 is_peers(Person1, Person2) if
 man(Person1, Age1) and
 man(Person2, Age2) and
@@ -32,6 +39,7 @@ Age1 = Age2.
 
 Goal
 %man(bekhan, Age).
-is_peers(bekhan, Who).
-is_younger(bekhan, Who).
-is_older(bekhan, Who).
+%is_peers(bekhan, Who).
+%is_younger(bekhan, Who).
+%is_older(bekhan, Who).
+is_interest(bekhan, Who).
