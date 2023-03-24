@@ -17,5 +17,11 @@ man(Person2, Age2) and
 Age1 = Age2.
 
 Goal
-man(bekhan,Age).      % Age=18
-is_older(bekhan,Who). % Who=bekhan
+man(bekhan,Age).
+
+  % Age=18
+  
+is_older(bekhan,Who).
+
+% Who=ruslan
+% Who=ali
