@@ -1,0 +1,21 @@
+Name = symbol.
+Age = integer.
+
+Predicates
+nondeterm man(name, age).
+nondeterm is_older(name, name).
+
+Clauses
+man(bekhan, 18).
+man(asad, 19).
+man(ruslan, 17).
+man(ali, 16).
+
+is_older(Person1, Person2) if
+man(Person1, Age1) and
+man(Person2, Age2) and
+Age1 = Age2.
+
+Goal
+man(bekhan,Age).      % Age=18
+is_older(bekhan,Who). % Who=bekhan
